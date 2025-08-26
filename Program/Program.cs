@@ -4,40 +4,62 @@
     {
         static void Main(string[] args)
         {
-            #region 박싱
-            // 값 형식의 데이터를 참조 형식으로 변환하는 과정입니다.
+            #region 컬렉션
 
-            // int value = 100;
+            #region List
+            /*
+            List<int> list = new List<int>();
 
-            // object generic = value;
+            list.Capacity = 10;
 
-            // Console.WriteLine("value : " +  value);
-            // Console.WriteLine("generic : " + generic);
+            list.Add(10); // 10 [0]
+            list.Add(20); // 10 20 [0][1]
+            list.Add(30); // 10 20 30 [0][1][2]
+            list.Add(40); 
+            list.Add(50); 
+
+            list.Insert(3, 75);  // Insert(index, element)
+
+            foreach (int element in list) // 범위기반 for문
+            {
+                Console.WriteLine(element);
+            }
+            */
+            #endregion
+
+            #region Dictionary
+            // hash table의 개방 주소법을 사용합니다.
+
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+
+            int money = 0;
+
+            dictionary.Add("Blade", 300);
+            dictionary.Add("Knife", 200);
+            dictionary.Add("Gun", 500);
+
+            foreach (var element in dictionary) // 자료형 예측 : var
+            {
+                Console.WriteLine($"Key : {element.Key}");
+                Console.WriteLine($"Value : {element.Value}");
+            }
+
+            string key = "Gun";
+
+            if (dictionary.TryGetValue(key, out money))
+            {
+                money = dictionary[key];
+            }
+            else
+            {
+                dictionary.Add(key, 500);
+            }
+
+            Console.WriteLine($"\nMoney of {key} : {money}");
 
             #endregion
 
-            #region 언박싱
-            // 참조 형식의 데이터를 값 형식으로 변환하는 과정입니다.
-
-            // int box = (int)generic; // 명시적 형변환
-
-            // Console.WriteLine("box : " + box);
-
             #endregion
-
-            Utility utility = new Utility();
-
-            // utility.Pause();
-
-            int a = 1;
-            int b = 3;
-
-            int c = -5;
-            
-            utility.Swap(ref a, ref b);
-
-            Console.WriteLine($"a : {a}\nb : {b}");
-            Console.WriteLine("Absolute c : " + utility.Absolute(in c));
         }
     }
 }
