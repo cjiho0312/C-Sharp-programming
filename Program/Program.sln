@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grammar", "..\Grammer\Grammar.csproj", "{9DD70BB7-06CF-4373-813C-215DCF98C576}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "..\Colection\Collection.csproj", "{8965AFD0-E272-47CA-9F5F-C85FEF35A068}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9DD70BB7-06CF-4373-813C-215DCF98C576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DD70BB7-06CF-4373-813C-215DCF98C576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DD70BB7-06CF-4373-813C-215DCF98C576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8965AFD0-E272-47CA-9F5F-C85FEF35A068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8965AFD0-E272-47CA-9F5F-C85FEF35A068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8965AFD0-E272-47CA-9F5F-C85FEF35A068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8965AFD0-E272-47CA-9F5F-C85FEF35A068}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

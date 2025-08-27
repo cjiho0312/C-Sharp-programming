@@ -4,60 +4,36 @@
     {
         static void Main(string[] args)
         {
-            #region 컬렉션
+            #region 추상 클래스
+            // 직접 생성할 수는 없지만, 다른 클래스가 상속받아
+            // 구체적인 기능을 만들 수 있도록 설계되어 있는 클래스입니다.
 
-            #region List
-            /*
-            List<int> list = new List<int>();
+            Terrain terrain = new Forest();
 
-            list.Capacity = 10;
+            terrain.Describe();
 
-            list.Add(10); // 10 [0]
-            list.Add(20); // 10 20 [0][1]
-            list.Add(30); // 10 20 30 [0][1][2]
-            list.Add(40); 
-            list.Add(50); 
+            Console.WriteLine("Width : " + terrain.Width);
+            Console.WriteLine("Height : " + terrain.Height);
 
-            list.Insert(3, 75);  // Insert(index, element)
+            terrain.Activate();
 
-            foreach (int element in list) // 범위기반 for문
-            {
-                Console.WriteLine(element);
-            }
-            */
-            #endregion
+            terrain = new Field();
 
-            #region Dictionary
-            // hash table의 개방 주소법을 사용합니다.
+            terrain.Describe();
 
-            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            Console.WriteLine("Width : " + terrain.Width);
+            Console.WriteLine("Height : " + terrain.Height);
 
-            int money = 0;
+            terrain.Activate();
 
-            dictionary.Add("Blade", 300);
-            dictionary.Add("Knife", 200);
-            dictionary.Add("Gun", 500);
+            terrain = new Sea();
 
-            foreach (var element in dictionary) // 자료형 예측 : var
-            {
-                Console.WriteLine($"Key : {element.Key}");
-                Console.WriteLine($"Value : {element.Value}");
-            }
+            terrain.Describe();
 
-            string key = "Gun";
+            Console.WriteLine("Width : " + terrain.Width);
+            Console.WriteLine("Height : " + terrain.Height);
 
-            if (dictionary.TryGetValue(key, out money))
-            {
-                money = dictionary[key];
-            }
-            else
-            {
-                dictionary.Add(key, 500);
-            }
-
-            Console.WriteLine($"\nMoney of {key} : {money}");
-
-            #endregion
+            terrain.Activate();
 
             #endregion
         }
